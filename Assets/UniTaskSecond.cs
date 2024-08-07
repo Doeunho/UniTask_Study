@@ -10,13 +10,12 @@ public class UniTaskSecond : MonoBehaviour
     //DelayType.UnscaledDeltaTime
     private async UniTaskVoid WaitSecond()
     {
-        await UniTask.Delay(TimeSpan.FromSeconds(1f), DelayType.UnscaledDeltaTime));
+        await UniTask.Delay(TimeSpan.FromSeconds(1f), DelayType.UnscaledDeltaTime);
         Debug.Log("1");
     }
 
     void Start()
     {
-        Time.timeScale = 0f;
         WaitSecond().Forget();
     }
 
